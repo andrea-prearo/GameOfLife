@@ -16,7 +16,7 @@ class Board: UIView {
         super.init(frame: CGRectMake(0, 0, 0, 0))
     }
 
-    required init(coder decoder: NSCoder) {
+    required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     let worldView: Board
     var timer: NSTimer!
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         worldView = Board(world: world)
         super.init(coder: aDecoder)
         
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 
         let margin: CGFloat = 20.0
         let size = view.frame.width - margin * 2.0
-        var frame = CGRectMake(margin, (view.frame.height - size) / 2.0, size, size)
+        let frame = CGRectMake(margin, (view.frame.height - size) / 2.0, size, size)
         worldView.frame = frame
         worldView.layer.borderColor = UIColor.darkGrayColor().CGColor
         worldView.layer.borderWidth = 2.0
